@@ -27,8 +27,6 @@ def get_qa_chain(persist_directory: str='chroma_store', model_name:str='mistral'
         template=(
             "You are a helpful assistant. Use ONLY the following context to answer. "
             "If the answer is not contained in the context, say you don't know.\n\n"
-            "But you can use your knowledge to answer the question if it's not contained in the context."
-            "You can greet the user to make them feel welcome and friendly."
             "Context:\n{context}\n\nQuestion: {question}"
         ),
     )
@@ -44,4 +42,6 @@ def get_qa_chain(persist_directory: str='chroma_store', model_name:str='mistral'
     print("✅ Fully local QA chain created!")
     return qa_chain
 
-
+# # Example Call;
+# if __name__ == "__main__":
+#     qa_chain = get_qa_chain(model_name='mistral')

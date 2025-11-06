@@ -34,3 +34,11 @@ def load_vector_store(persist_directory: str="chroma_store"):
     )
     print('Vector Store loaded from disk')
     return vectordb
+
+
+# if __name__=="__main__":
+#     from loader import load_documents, split_documents
+
+#     files = [r"C:\Users\saroj\Documents\LangChain-RAG\files\note1.pdf"]
+#     docs = split_documents(load_documents(files))
+#     create_vector_store(docs)
